@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="demo" />
+        <module name="tools" />
+        <module name="vertx-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="demo" target="1.8" />
+      <module name="mini-program-server" target="1.8" />
+      <module name="tools" target="1.8" />
+      <module name="vertx-web" target="1.8" />
+      <module name="weixin-common" target="1.7" />
+      <module name="weixin-cp" target="1.7" />
+      <module name="weixin-miniapp" target="1.7" />
+      <module name="weixin-mp" target="1.7" />
+      <module name="weixin-open" target="1.7" />
+      <module name="weixin-pay" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
