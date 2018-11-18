@@ -13,7 +13,7 @@
 hs_err_pid*
 
 /.idea/
-/target/
+**/target/
 /file-uploads/
 .vertx/
 src/local_test/

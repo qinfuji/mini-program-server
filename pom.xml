@@ -158,41 +158,60 @@
     </distributionManagement>
 
 
-    <build>
-    <pluginManagement>
-        <plugins>
-            <!-- spring boot plugin-->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring.boot.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                        <configuration>
-                            <finalName>
-                                ${project.artifactId}-${project.version}-fat
-                            </finalName>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <profileActive>dev</profileActive>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <profileActive>prod</profileActive>
+            </properties>
+        </profile>
+    </profiles>
 
-            <!-- 由于远程仓库每次deploy必须升级版本不允许更新已有版本，并且模块的改动必须提升父版本
-            ，所以必要时打开该插件可以阻止没有进行改动的模块随父模块一并deploy。防止远程仓库拒绝deploy请求。
-            目前没找到更好办法解决该问题，待定... ... -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>${plugin.deploy.version}</version>
-                <configuration>
-                    <deployAtEnd>true</deployAtEnd>
-                </configuration>
-            </plugin>
-        </plugins>
-    </pluginManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- spring boot plugin-->
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring.boot.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                            <configuration>
+                                <finalName>
+                                    ${project.artifactId}-${project.version}-fat
+                                </finalName>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <!-- 由于远程仓库每次deploy必须升级版本不允许更新已有版本，并且模块的改动必须提升父版本
+                ，所以必要时打开该插件可以阻止没有进行改动的模块随父模块一并deploy。防止远程仓库拒绝deploy请求。
+                目前没找到更好办法解决该问题，待定... ... -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>${plugin.deploy.version}</version>
+                    <configuration>
+                        <deployAtEnd>true</deployAtEnd>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <!-- resources plugin -->
             <plugin>
@@ -267,12 +286,6 @@
             </plugin>
         </plugins>
 
-        <resources>
-            <resource>
-                <directory>${project.basedir}/src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
         <testResources>
             <testResource>
                 <directory>${project.basedir}/src/test/resources</directory>
