@@ -99,12 +99,14 @@ public class SpringWebVerticle extends AbstractVerticle implements ApplicationCo
 
     void actionRoutes(Router router) {
         Map<String, RouteAction> actionMap = this.ctx.getBeansOfType(RouteAction.class);
+        System.out.println(actionMap);
         ActionContext actionContext = this.ctx.getBean(ActionContext.class);
         if (actionMap != null && !actionMap.isEmpty()) {
             actionMap.entrySet().stream()
                     /*转换handler*/
                     .map(entry -> {
                         RouteAction action = entry.getValue();
+
                         return actionContext.build(action);
                     })
                     /*排序*/
