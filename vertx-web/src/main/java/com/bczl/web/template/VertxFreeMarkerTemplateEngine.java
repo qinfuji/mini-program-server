@@ -2,6 +2,8 @@ package com.bczl.web.template;
 
 import io.vertx.core.*;
 import io.vertx.ext.web.RoutingContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,8 +13,10 @@ import java.util.Map;
  * <p>
  * Created by licheng1 on 2017/3/31.
  */
+@Component
 public class VertxFreeMarkerTemplateEngine {
 
+    //@Autowired
     private Vertx vertx;
 
     TemplateEngine engine = new FreeMarkerTemplateEngine();

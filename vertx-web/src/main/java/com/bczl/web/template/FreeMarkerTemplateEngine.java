@@ -3,6 +3,7 @@ package com.bczl.web.template;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import io.vertx.ext.web.impl.ConcurrentLRUCache;
+import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStreamWriter;
