@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="coupon" />
         <module name="demo" />
         <module name="tools" />
-        <module name="vertx-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="coupon" target="1.8" />
       <module name="demo" target="1.8" />
       <module name="mini-program-server" target="1.8" />
       <module name="tools" target="1.8" />

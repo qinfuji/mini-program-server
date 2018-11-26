@@ -1,30 +1,30 @@
-package com.bczl.demo.web.actions;
+package com.bczl.coupon.actions;
 
 import com.bczl.web.action.ActionRequest;
 import com.bczl.web.action.FreemarkerView;
 import com.bczl.web.action.ModelAndView;
 import com.bczl.web.action.RouteAction;
 import io.vertx.core.Future;
-import io.vertx.core.Vertx;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+/**
+ * 创建优惠券、转发红包券
+ * 角色：商户
+ * 前置条件：商户已经登录
+ * 创建位置：后台、手机端
+ * 书剑类型：优惠券、传递红包？
+ */
 @Component
-public class FirstAction implements RouteAction {
-
-    @Value("${actions.firstAction.route}")
+public class CreateCouponAction implements RouteAction {
+    @Value("${actions.createCouponAction.route}")
     private String route;
 
-    @Value("${actions.firstAction.template}")
+    @Value("${actions.createCouponAction.template}")
     private String template;
-
-    @Autowired
-    private Vertx vertx;
 
     @Override
     public String route() {
-        System.out.println(vertx);
         System.out.println("route :"+ route);
         return route;
     }
