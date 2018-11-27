@@ -9,13 +9,18 @@
         <module name="coupon" />
         <module name="demo" />
         <module name="tools" />
+        <module name="usercenter" />
+        <module name="vertx-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="admin" target="1.8" />
+      <module name="client" target="1.8" />
       <module name="coupon" target="1.8" />
       <module name="demo" target="1.8" />
       <module name="mini-program-server" target="1.8" />
       <module name="tools" target="1.8" />
+      <module name="usercenter" target="1.8" />
       <module name="vertx-web" target="1.8" />
       <module name="weixin-common" target="1.7" />
       <module name="weixin-cp" target="1.7" />

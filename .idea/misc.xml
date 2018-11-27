@@ -4,11 +4,14 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/vertx-web/pom.xml" />
+        <option value="$PROJECT_DIR$/usercenter/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/vertx-web/pom.xml" />
+        <option value="$PROJECT_DIR$/admin/pom.xml" />
+        <option value="$PROJECT_DIR$/client/pom.xml" />
         <option value="$PROJECT_DIR$/weixin-common/pom.xml" />
         <option value="$PROJECT_DIR$/weixin-cp/pom.xml" />
         <option value="$PROJECT_DIR$/weixin-miniapp/pom.xml" />

@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/mini-program-server.iml" filepath="$PROJECT_DIR$/mini-program-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools/tools.iml" filepath="$PROJECT_DIR$/tools/tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/usercenter/usercenter.iml" filepath="$PROJECT_DIR$/usercenter/usercenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vertx-web/vertx-web.iml" filepath="$PROJECT_DIR$/vertx-web/vertx-web.iml" />
     </modules>
   </component>
 </project>

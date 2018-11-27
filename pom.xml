@@ -7,17 +7,17 @@
     <groupId>com.bczl</groupId>
     <artifactId>mini-program-server</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>1.0.0</version>
     <modules>
         <module>vertx-web</module>
         <module>tools</module>
         <module>demo</module>
         <module>coupon</module>
+        <module>usercenter</module>
     </modules>
 
     <properties>
-        <mini.program.server.web>1.0</mini.program.server.web>
-        <mini.program.tools>1.0</mini.program.tools>
+        <parent-version>1.0.0</parent-version>
         <spring.boot.version>2.1.0.RELEASE</spring.boot.version>
         <weixin.java.tools.version>3.2.0</weixin.java.tools.version>
         <vertx.version>3.5.4</vertx.version>
@@ -39,13 +39,24 @@
             <dependency>
                 <groupId>com.bczl</groupId>
                 <artifactId>vertx-web</artifactId>
-                <version>${mini.program.server.web}</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.bczl</groupId>
                 <artifactId>tools</artifactId>
-                <version>${mini.program.tools}</version>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bczl</groupId>
+                <artifactId>coupon</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bczl</groupId>
+                <artifactId>usercenter</artifactId>
+                <version>${project.version}</version>
             </dependency>
             <!--spring boot-->
             <dependency>
@@ -214,6 +225,14 @@
             </plugins>
         </pluginManagement>
         <plugins>
+            <!--<plugin>-->
+                <!--<groupId>org.codehaus.mojo</groupId>-->
+                <!--<artifactId>versions-maven-plugin</artifactId>-->
+                <!--<version>2.3</version>-->
+                <!--<configuration>-->
+                    <!--<generateBackupPoms>false</generateBackupPoms>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
             <!-- resources plugin -->
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>

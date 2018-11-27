@@ -9,14 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>coupon</artifactId>
-    <description>券管理</description>
+    <artifactId>usercenter</artifactId>
+    <description>用户中心</description>
     <dependencies>
         <dependency>
             <groupId>com.bczl</groupId>
             <artifactId>vertx-web</artifactId>
         </dependency>
     </dependencies>
-
 
 </project>
